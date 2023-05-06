@@ -1,0 +1,561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.2.7" />
+<style type="text/css">
+/* Debug borders */
+p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
+/*
+  border: 1px solid red;
+*/
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+tt {
+  color: navy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  font-family: sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+
+div.sectionbody {
+  font-family: serif;
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+span#author {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+span#email {
+}
+span#revision {
+  font-family: sans-serif;
+}
+
+div#footer {
+  font-family: sans-serif;
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+div#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+div#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+div#preamble,
+div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-right: 10%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+
+div.listingblock {
+  margin-right: 0%;
+}
+div.listingblock > div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock {
+  padding-left: 2.0em;
+}
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock {
+  padding-left: 2.0em;
+}
+div.verseblock > div.content {
+  white-space: pre;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 2px solid silver;
+}
+
+div.exampleblock > div.content {
+  border-left: 2px solid silver;
+  padding: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+div.imageblock img { border: 1px solid silver; }
+span.image img { border-style: none; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+div.olist > ol {
+  list-style-type: decimal;
+}
+div.olist2 > ol {
+  list-style-type: lower-alpha;
+}
+
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+tfoot {
+  font-weight: bold;
+}
+
+div.hlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hlist td {
+  padding-bottom: 15px;
+}
+td.hlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+}
+td.hlist2 {
+  vertical-align: top;
+}
+
+@media print {
+  div#footer-badges { display: none; }
+}
+
+div#toctitle {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+/* Workarounds for IE6's broken and incomplete CSS2. */
+
+div.sidebar-content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+div.sidebar-title, div.image-title {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 0.0em;
+  margin-bottom: 0.5em;
+}
+
+div.listingblock div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock-attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock-content {
+  white-space: pre;
+}
+div.verseblock-attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+
+div.exampleblock-content {
+  border-left: 2px solid silver;
+  padding-left: 0.5em;
+}
+
+/* IE6 sets dynamically generated links as visited. */
+div#toc a:visited { color: blue; }
+
+/* Because IE6 child selector is broken. */
+div.olist2 ol {
+  list-style-type: lower-alpha;
+}
+div.olist2 div.olist ol {
+  list-style-type: decimal;
+}
+</style>
+<title>Freedoom</title>
+</head>
+<body>
+<div id="header">
+<h1>Freedoom</h1>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="para"><p>Freedoom is a project to create a complete Doom II-compatible IWAD file
+which is Free Software.</p></div>
+<div class="para"><p>The IWAD file is the file used by Doom which contains all the game data
+(graphics, sound effects, music, etc.). While the Doom source code is
+Free, you currently still need one of the proprietary IWAD files from id
+in order to play Doom. Freedoom aims to create a Free alternative.
+Combined with the GPL-licensed Doom source code this will result in a
+complete Free Doom-based game.</p></div>
+<div class="para"><p>For more information, see <a href="http://www.nongnu.org/freedoom/">http://www.nongnu.org/freedoom/</a>.</p></div>
+</div>
+</div>
+<h2 id="_what_8220_free_software_8221_means">What &#8220;Free Software&#8221; means</h2>
+<div class="sectionbody">
+<div class="para"><p>When we speak of Free Software, we refer to the software movement in
+which your freedoms to use, copy, modify, and study it are ensured.  For
+example, you may freely use Freedoom for any purpose you see fit, you
+may redistribute it to anyone without needing to ask for permission, you
+may modify it (provided you keep the license intact, see <tt>COPYING</tt>), and
+you may study it &#8212; for example, to see how a Doom IWAD is built.  To
+facilitate this, you can get the full source code (here, in the form of
+a DeuTex tree) for Freedoom.</p></div>
+<div class="para"><p>You may read more about Free Software at the <a href="http://www.gnu.org/">GNU</a>
+and <a href="http://www.fsf.org/">Free Software Foundation</a> websites.</p></div>
+</div>
+<h2 id="_contributing_to_freedoom">Contributing to Freedoom</h2>
+<div class="sectionbody">
+<div class="para"><p>Contributions to Freedoom are always welcome, however there are a few
+guidelines that should be followed:</p></div>
+<h3 id="_intellectual_property">Intellectual Property</h3><div style="clear:left"></div>
+<div class="para"><p>We know people hate legalese, but this is important.  This applies to
+<strong>everything</strong> which is submitted.</p></div>
+<div class="para"><p>You must be incredibly careful when basing on existing graphics or
+sounds.  Most Doom projects are incredibly lax on reusing intellectual
+property &#8212; there are plenty of WADs out there which contain modified
+Doom sprites, for example.  However, due to the nature of this project,
+we do not have the same liberty to rip as we please.</p></div>
+<div class="para"><p>The general rules go as follows:</p></div>
+<div class="ilist"><ul>
+<li>
+<p>
+Everything you submit must be 100% your own work.  You must not base
+    upon resources from Doom or any other game.  You may not even rip
+    textures from WADs you have downloaded (if you find a WAD with
+    textures in which look useful, let us know &#8212; that way, we can
+    contact the author).
+</p>
+</li>
+<li>
+<p>
+Do not simply copy the original resources.  Where possible, try to
+    make an effort to make the new versions look visibly different from
+    the originals.
+</p>
+</li>
+<li>
+<p>
+Be especially careful of &#8220;free texture&#8221; (or &#8220;free sound&#8221; or
+    &#8220;free graphic&#8221;) sites.  Although these would appear at first to
+    be okay to use, many are free for &#8220;non-commercial use only&#8221;.  One
+    of the things we want to be able to do is put this on GNU/Linux CDs
+    (which are sold &#8212; &#8220;a commercial use&#8221;).
+</p>
+</li>
+<li>
+<p>
+The main exception is that you may of course reuse anything in the
+    Freedoom source tree.  In fact, this is encouraged, as reusing
+    material will give the WAD a more consistent feel.
+</p>
+</li>
+</ul></div>
+<h3 id="_levels">Levels</h3><div style="clear:left"></div>
+<div class="para"><p>Levels should be in Boom format; you may exceed the limits of Vanilla
+Doom and use Boom features; however, do not use features that are not
+supported by Boom 2.02 and compatible ports. Levels should be in Doom's
+original format, not in &#8220;Hexen&#8221; format.</p></div>
+<div class="para"><p>It is sensible to also heed the following guidelines:</p></div>
+<div class="ilist"><ul>
+<li>
+<p>
+Make sure that skill levels are implemented, and that all
+    multiplayer start points are present.
+</p>
+</li>
+<li>
+<p>
+Make levels appropriately difficult for their position within the
+    progression of the game.  Also bear in mind that not all players may
+    be as skilled a player as you.
+</p>
+</li>
+<li>
+<p>
+Do not use tricks that exploit Doom's software renderer; some source
+    ports, especially those that use hardware accelerated rendering, may
+    not render it properly.  Examples of tricks to avoid include those used
+    to simulate 3D bridges and &#8220;deep water&#8221; effects.
+</p>
+</li>
+<li>
+<p>
+Boom removes almost all of the limits on rendering; however, do not
+    make excessively complicated scenes.  It is desirable that Freedoom
+    levels should be playable on old or low-powered hardware.
+</p>
+</li>
+<li>
+<p>
+Always test in <a href="http://www.teamtnt.com/boompubl/boom2.htm">Boom</a>
+    itself rather than a derivative such as PrBoom.  This ensures that
+    your levels really are Boom-compatible rather than using any extra
+    features.  As DOS is rather rare these days, you may not have a
+    system which can run Boom natively, so you may use either
+    <a href="http://www.dosbox.com/">DOSBox</a> or <a href="http://www.freedos.org/">FreeDOS</a>.
+</p>
+</li>
+</ul></div>
+<h3 id="_graphics">Graphics</h3><div style="clear:left"></div>
+<div class="ilist"><ul>
+<li>
+<p>
+Graphics should be the same color and size as the originals to
+    remain compatible with PWADs (otherwise, they may end up looking
+    like a mess).  They cannot use the Doom font.
+</p>
+</li>
+<li>
+<p>
+Textures should be the same dimensions as the originals.  They
+    should be similar but not identical (to avoid IP infringement) &#8212;
+    in fact, they shuold be as different as possible while keeping to
+    the general theme of the texture.  As mentioned above, try to make
+    a concious effort to make the textures visibly different from the
+    originals.  Critically, the textures should tile in the same way as
+    the originals.
+</p>
+</li>
+<li>
+<p>
+Some textures contain the letters UAC or references to UAC; this is
+    an intellectual property of id Software (trademarked).  Instead, use
+    the letters AGM in your textures.
+</p>
+</li>
+<li>
+<p>
+Sprites should be roughly the same size and shape, but different to
+    the originals.  Doom monsters are id's intellectual property (which
+    means no imps, cyberdemons, etc).  The new monsters will behave the
+    same way as the originals, but will be totally new.
+</p>
+</li>
+</ul></div>
+<h3 id="_build_process">Build process</h3><div style="clear:left"></div>
+<div class="para"><p>The Freedoom build process is fairly complete and should not change
+without good reason.  Write a decent explanation why your method is
+better; just enough to get your point across is good enough.</p></div>
+<h3 id="_documentation">Documentation</h3><div style="clear:left"></div>
+<div class="para"><p>Freedoom always needs help with the documentation, so please send your
+patches, but keep in mind:</p></div>
+<div class="ilist"><ul>
+<li>
+<p>
+We use <a href="http://www.methods.co.nz/asciidoc/">AsciiDoc</a> for writing the
+    documentation.  AsciiDoc is a simple plaintext-based format which is
+    simple to read and write in its source form, and makes pretty HTML
+    documents out of them (it also supports other formats like
+    DocBook/PDF/manual pages&#8230;).
+</p>
+</li>
+<li>
+<p>
+Headers are formated in a wiki-style format, this makes it easier
+    for Vim (perhaps other editors, too) to automatically re-format
+    text.
+</p>
+</li>
+<li>
+<p>
+Text is kept at 72 characters wide.  In Vim, you can set the editor
+    to automatically insert line breaks as you're typing by performing
+    <tt>set textwidth=72</tt>.  Special exceptions to the width rule might be
+    allowed when necessary (for example, inserting long URLs).
+</p>
+</li>
+</ul></div>
+<h3 id="_submitting_your_work">Submitting your work</h3><div style="clear:left"></div>
+<div class="para"><p>TODO: Figure out the best method of doing this.  This mainly requires
+time to see what works best.</p></div>
+<div class="para"><p>If you use git, make sure your commit messages start with a single line,
+under 72 characters, which provides an adequate summary of your changes.
+You should prefix this line with the component you are committing (for
+example, &#8220;map17: fixed unbeatable map&#8221;).  This should be followed by a
+blank line and a paragraph or more to explain your change in detail (for
+example, explaining what part of the map was broken).  See commit
+27762aa5f34f590bfc29d1f667f9121907cb8a98 for an example.  If you use
+GPG, try to sign your commits with <tt>git commit -s</tt> if possible; this
+ensures that you are who you say you are.</p></div>
+<div class="para"><p>You should commit often; each important change should get its own
+commit, but minor changes need not.  Take advantage of git's ability to
+rewrite history, don't use <tt>git revert</tt> on your private copy of the
+repository, just remove (<tt>git reset</tt>) or amend (<tt>git commit &#8212;amend</tt>)
+the faulty commit as necessary.  Leave all the interesting and important
+history bits, leave out stupid mistakes like spell check errors.</p></div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2008-12-31 23:53:03 PDT
+</div>
+</div>
+</body>
+</html>
